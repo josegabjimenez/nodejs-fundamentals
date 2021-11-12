@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const read = async (path) => {
 	try {
 		const data = await fs.readFile(path);
-		return data.toString();
+		console.log(data.toString());
 	} catch (err) {
 		console.error(err);
 	}
@@ -27,8 +27,25 @@ const deleteFile = async (path) => {
 	}
 };
 
-const main = async () => {
-	console.log(await read(`${__dirname}/text.txt`));
+read(`${__dirname}/text.txt`);
+
+// WRITE JOSE FIFTY TIMES
+// let text = '';
+// let i = 0;
+// while (i < 50) {
+// 	text += 'Jose\n';
+// 	i++;
+// }
+// write(`${__dirname}/text${i}characters.txt`, text);
+
+// deleteFile(`${__dirname}/text51characters.txt`);
+
+const makeTable = (num, start, end) => {
+	let table = '';
+	for (let i = start; i < end; i++) {
+		table += `${num} * ${i} = ${num * i}------------\n`;
+	}
+	write(`${__dirname}/table.txt`, table);
 };
 
-main();
+makeTable(7, 0, 20);
