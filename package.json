@@ -14,5 +14,10 @@
     "fundamentals"
   ],
   "author": "Jose Gabriel Jiménez Vidales <josegabojimenez@gmail.com>",
-  "license": "MIT "
+  "license": "MIT ",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "moment": "^2.29.1",
+    "sharp": "^0.29.3"
+  }
 }
