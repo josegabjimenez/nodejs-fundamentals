@@ -8,7 +8,8 @@ const router = (req, res) => {
 	switch (petition) {
 		case '/hola':
 			res.writeHead(201, { 'Content-Type': 'text/plain; charset=utf-8' });
-			res.write('Hola krnal áeíoú, pepito perez es una ñ');
+			let saludo = hola();
+			res.write(saludo);
 			res.end();
 			break;
 		case '/hello':
@@ -22,6 +23,10 @@ const router = (req, res) => {
 			res.end();
 			break;
 	}
+};
+
+const hola = () => {
+	return 'Hola krnal áeíoú, pepito perez es una ñ';
 };
 
 const server = http.createServer(router);

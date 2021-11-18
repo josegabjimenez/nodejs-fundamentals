@@ -1,0 +1,20 @@
+{
+	"name": "gulp",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"greeting": "gulp greeting",
+		"build": "gulp build",
+		"serve": "gulp serve",
+		"start": "gulp"
+	},
+	"keywords": [],
+	"author": "Jose Gabriel Jiménez Vidales <josegabojimenez@gmail.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"browser-sync": "^2.27.7",
+		"gulp": "^4.0.2"
+	}
+}
